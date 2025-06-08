@@ -148,7 +148,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👥 Authors
 
-- [HARIHARANS24](https://github.com/BALADURGAG24) - Initial work
+- [BALADURGAG24](https://github.com/BALADURGAG24) - Initial work
 
 ## 🙏 Acknowledgments
 

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Countdown Timer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 400px;
+            width: 90%;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        #event {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #fdd835;
+        }
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            letter-spacing: 1px;
+            color: #e0e0e0;
+        }
+        #countdown {
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 15px 20px;
+            display: inline-block;
+            min-width: 280px;
+        }
+        @media (max-width: 480px) {
+            #countdown {
+                font-size: 36px;
+                letter-spacing: 2px;
+                padding: 10px 15px;
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Event Countdown Timer</h1>
+        <div id="timer">
+            <h3 id="event">{{ data.name }}</h3>
+            <h2>Time Remaining:</h2>
+            <div id="countdown">
+                {{ data.hours|stringformat:"02d" }} : {{ data.minutes|stringformat:"02d" }} : {{ data.seconds|stringformat:"02d" }}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateTimer() {
+            var hours = parseInt(document.getElementById('countdown').textContent.split(':')[0]);
+            var minutes = parseInt(document.getElementById('countdown').textContent.split(':')[1]);
+            var seconds = parseInt(document.getElementById('countdown').textContent.split(':')[2]);
+
+            if (seconds > 0) {
+                seconds--;
+            } else {
+                if (minutes > 0) {
+                    minutes--;
+                    seconds = 59;
+                } else {
+                    if (hours > 0) {
+                        hours--;
+                        minutes = 59;
+                        seconds = 59;
+                    }
+                }
+            }
+
+            document.getElementById('countdown').textContent =
+                (hours < 10 ? '0' : '') + hours + ' : ' +
+                (minutes < 10 ? '0' : '') + minutes + ' : ' +
+                (seconds < 10 ? '0' : '') + seconds;
+        }
+
+        setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>

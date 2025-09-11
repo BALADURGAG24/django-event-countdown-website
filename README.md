@@ -5,7 +5,7 @@ A Django-based countdown application that helps users track and manage countdown
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/BALADURGAG24/django-event-countdown-website)
 
 ## 📁 Project Structure
-
+ 
 ```
 📦 event-countdown-timer-django 
  ┣ 📂 countdown 

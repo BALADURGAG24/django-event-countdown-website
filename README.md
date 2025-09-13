@@ -12,7 +12,7 @@ A Django-based countdown application that helps users track and manage countdown
  ┃ ┣ 📂 countdown  
  ┃ ┃ ┣ 📄 __init__.py   
  ┃ ┃ ┣ 📄 asgi.py  
- ┃ ┃ ┣ 📄 settings.py 
+ ┃ ┃ ┣ 📄 settings.py  
  ┃ ┃ ┣ 📄 urls.py 
  ┃ ┃ ┗ 📄 wsgi.py
  ┃ ┣ 📂 home

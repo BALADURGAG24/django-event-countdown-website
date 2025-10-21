@@ -7,7 +7,7 @@ A Django-based countdown application that helps users track and manage countdown
 ## 📁 Project Structure 
   
 ```
-📦 event-countdown-timer-django 
+📦 event-countdown-timer-django  
  ┣ 📂 countdown  
  ┃ ┣ 📂 countdown   
  ┃ ┃ ┣ 📄 __init__.py     

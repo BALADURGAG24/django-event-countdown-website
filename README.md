@@ -7,28 +7,34 @@ A Django-based countdown application that helps users track and manage countdown
 ## 📁 Project Structure 
   
 ```
-📦 event-countdown-timer-django  
- ┣ 📂 countdown  
- ┃ ┣ 📂 countdown    
- ┃ ┃ ┣ 📄 __init__.py     
- ┃ ┃ ┣ 📄 asgi.py    
- ┃ ┃ ┣ 📄 settings.py   
- ┃ ┃ ┣ 📄 urls.py 
- ┃ ┃ ┗ 📄 wsgi.py
- ┃ ┣ 📂 home
- ┃ ┃ ┣ 📂 migrations
- ┃ ┃ ┣ 📂 templates
- ┃ ┃ ┃ ┗ 📄 myapp.html
- ┃ ┃ ┣ 📄 __init__.py
- ┃ ┃ ┣ 📄 admin.py
- ┃ ┃ ┣ 📄 apps.py
- ┃ ┃ ┣ 📄 models.py
- ┃ ┃ ┣ 📄 tests.py
- ┃ ┃ ┣ 📄 urls.py
- ┃ ┃ ┗ 📄 views.py
- ┃ ┣ 📄 db.sqlite3
- ┃ ┗ 📄 manage.py
- ┗ 📄 README.md
+Directory structure:
+└── baladurgag24-django-event-countdown-website/
+    ├── README.md
+    ├── db.sqlite3
+    ├── LICENSE
+    ├── manage.py
+    ├── countdown/
+    │   ├── __init__.py
+    │   ├── asgi.py
+    │   ├── settings.py
+    │   ├── urls.py
+    │   ├── wsgi.py
+    │   └── __pycache__/
+    └── home/
+        ├── __init__.py
+        ├── admin.py
+        ├── apps.py
+        ├── models.py
+        ├── tests.py
+        ├── urls.py
+        ├── views.py
+        ├── __pycache__/
+        ├── migrations/
+        │   ├── 0001_initial.py
+        │   ├── __init__.py
+        │   └── __pycache__/
+        └── templates/
+            └── myapp.html
 ```
 
 ## ⚙️ How Does It Work? (Flow)
